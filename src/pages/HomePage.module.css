@@ -1,0 +1,14 @@
+/* Homeのスタイル */
+/* ヒーローエリア */
+.hero {
+  margin: 20px 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+/* セクションエリア */
+/* 現状は更新履歴,このサイトについて */
+.section {
+  margin-bottom: 20px;
+}

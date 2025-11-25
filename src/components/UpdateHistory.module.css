@@ -1,0 +1,63 @@
+/* 更新履歴のスタイル */
+/* 更新履歴全体 */
+.container {
+  max-height: 190px;           /* スクロール領域の高さ */
+  overflow-y: auto;            /* 縦スクロール有効 */
+  border: 1px solid var(--color-main);
+  border-radius: 4px;
+  background-color: var(--color-primary);
+  margin: 10px 0;
+}
+
+/* タイトル(更新履歴) */
+.title {
+  padding: 4px 12px;
+  color: var(--color-title);
+  position: sticky;          /* スクロール固定 */
+  background-color: var(--color-primary);
+  border-bottom: 1px solid var(--color-main);
+  font-size: var(--font-size-lg);
+  font-weight: 400;;
+  z-index: 1;
+}
+
+/* スクロールバーのスタイル */
+.container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+.item {
+  display: flex;
+  gap: 16px;
+  padding: 2px 6px;
+  border-bottom: 1px solid var(--color-primary);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.date {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;        /* 日付は折り返さない */
+}
+
+.description {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+}

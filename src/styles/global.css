@@ -1,0 +1,61 @@
+:root {
+  /* カラーパレット */
+  --color-primary: #fcfdfe; /* ベース */
+  --color-main: #1f1f1f; /* メイン */
+  --color-accent: #f9a604;
+  --color-background: #fcfdfe;
+  --color-text: #3f3f3f;
+  --color-title: #1f1f1f;
+  --color-border: #e5e7eb;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* スペーシング */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* フォント */
+  --font-family: system-ui, sans-serif; /* システムフォントを指定 */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+}
+
+/* ダークモード */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1a1a1a;
+    --color-text: #ffffff;
+    --color-border: #2a2a2a;
+  }
+}
+
+/* リセットCSS */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* グローバルスタイル */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* リストのスタイルは無し */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}

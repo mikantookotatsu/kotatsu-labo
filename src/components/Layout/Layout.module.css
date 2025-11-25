@@ -1,0 +1,28 @@
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr 40px;
+  min-height: 100vh;    /* 画面1ページ分 */
+  padding: 10px;
+  gap: 20px;
+}
+
+.main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* レスポンシブ対応 TODO:暫定 */
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+}
