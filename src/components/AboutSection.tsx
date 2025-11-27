@@ -49,7 +49,7 @@ export const AboutSection = memo(() => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={styles.link}
-                  aria-label="GitHub"
+                  aria-label="GitHubへのリンク"
                 >
                   <FaGithub className={styles.icon} />
                   GitHub
@@ -60,10 +60,10 @@ export const AboutSection = memo(() => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className={styles.link}
-                  aria-label="Note"
+                  aria-label="noteへのリンク"
                 >
                   <IoDocumentText className={styles.icon} />
-                  Note
+                  note
                 </a>
               </div>
             </div>

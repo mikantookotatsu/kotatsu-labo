@@ -1,0 +1,73 @@
+/* タイトル */
+.title {
+  margin: 20px 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+.gameGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+/* ゲームのカードレイアウト */
+.gameCard {
+  background-color: var(color-background);
+  border: 1px solid var(--color-main);
+  border-radius: 4px;
+  overflow: auto;
+}
+
+/* 各ゲームのタイトル部 */
+.gameTitle {
+  padding: 4px 12px;
+  color: var(--color-title);
+  background-color: var(--color-primary);
+  border-bottom: 1px solid var(--color-main);
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+}
+
+/* ゲームサムネイル */
+.gameImage {
+  display: block;
+  margin:12px auto 0px auto;
+
+  width: 50%;
+  object-fit: cover;
+}
+
+/* ゲーム説明部 */
+.gameInfo {
+  padding: 8px;
+}
+
+/* ゲーム説明文 */
+.gameDescription {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+}
+
+.playButton {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  border: 1px dashed var(--color-main);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--color-text);
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-accent);
+    color: white;
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+}
