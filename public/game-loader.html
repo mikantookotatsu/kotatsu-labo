@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Game Loader</title>
+    <style>
+      /* 基本リセット */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+      }
+
+      /* ebitengineが生成するcanvasを中央配置 */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* ローディング表示 */
+      #loading {
+        color: #fff;
+        font-family: monospace;
+        font-size: 14px;
+      }
+
+      /* エラー表示 */
+      #error {
+        color: #ff6b6b;
+        font-family: monospace;
+        font-size: 14px;
+        padding: 20px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading">Loading game...</div>
+    <div id="error"></div>
+
+    <!-- Go WASMランタイム -->
+    <script src="/wasm_exec.js"></script>
+    <script>
+      // URLパラメータからwasmファイル名を取得
+      const urlParams = new URLSearchParams(window.location.search);
+      const wasmFile = urlParams.get("wasm");
+
+      const loadingEl = document.getElementById("loading");
+      const errorEl = document.getElementById("error");
+
+      // wasmパラメータが指定されていない場合
+      if (!wasmFile) {
+        loadingEl.style.display = "none";
+        errorEl.style.display = "block";
+        errorEl.textContent = "Error: WASM file not specified";
+        throw new Error("WASM file parameter is required");
+      }
+
+      // WASMファイルのパスを構築
+      const wasmPath = `/games/${wasmFile}`;
+
+      // Go WASMの初期化と実行
+      const go = new Go();
+
+      WebAssembly.instantiateStreaming(fetch(wasmPath), go.importObject)
+        .then((result) => {
+          // ローディング表示を非表示
+          loadingEl.style.display = "none";
+          // WASMを実行
+          go.run(result.instance);
+        })
+        .catch((err) => {
+          console.error("WASM読み込みエラー:", err);
+          loadingEl.style.display = "none";
+          errorEl.style.display = "block";
+          errorEl.textContent = `Error loading ${wasmFile}: ${err.message}`;
+        });
+    </script>
+  </body>
+</html>

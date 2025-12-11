@@ -1,6 +1,6 @@
-import { memo } from 'react';
-import { historyData } from '@/data/history';
-import styles from './UpdateHistory.module.css';
+import { memo } from "react";
+import { historyData } from "@/data/history";
+import styles from "./UpdateHistory.module.css";
 
 /**
  * 更新履歴コンポーネント
@@ -23,4 +23,4 @@ export const UpdateHistory = memo(() => {
   );
 });
 
-UpdateHistory.displayName = 'UpdateHistory';
+UpdateHistory.displayName = "UpdateHistory";

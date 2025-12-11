@@ -1,0 +1,44 @@
+/* WasmGame.module.css */
+
+/* 外側のラッパー - サイズ制御の基準 */
+.wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  /* 16:9のアスペクト比を維持 */
+  aspect-ratio: 4 / 3;
+}
+
+/* iframe本体 */
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--color-main);
+  border-radius: 4px;
+  background-color: #000;
+  display: block;
+}
+
+/* タブレット以下 */
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: calc(100% - 16px);
+    /* 余白を確保 */
+    margin: 0 8px;
+  }
+}
+
+/* スマートフォン */
+@media (max-width: 480px) {
+  .wrapper {
+    max-width: calc(100% - 16px);
+  }
+
+  .iframe {
+    border-width: 1px;
+  }
+}

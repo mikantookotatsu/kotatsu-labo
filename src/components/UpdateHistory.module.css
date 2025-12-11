@@ -1,8 +1,8 @@
 /* 更新履歴のスタイル */
 /* 更新履歴全体 */
 .container {
-  max-height: 190px;           /* スクロール領域の高さ */
-  overflow-y: auto;            /* 縦スクロール有効 */
+  max-height: 190px; /* スクロール領域の高さ */
+  overflow-y: auto; /* 縦スクロール有効 */
   border: 1px solid var(--color-main);
   border-radius: 4px;
   background-color: var(--color-primary);
@@ -13,11 +13,11 @@
 .title {
   padding: 4px 12px;
   color: var(--color-title);
-  position: sticky;          /* スクロール固定 */
+  position: sticky; /* スクロール固定 */
   background-color: var(--color-primary);
   border-bottom: 1px solid var(--color-main);
   font-size: var(--font-size-lg);
-  font-weight: 400;;
+  font-weight: 400;
   z-index: 1;
 }
 
@@ -54,7 +54,7 @@
 .date {
   color: var(--color-text);
   font-size: var(--font-size-sm);
-  white-space: nowrap;        /* 日付は折り返さない */
+  white-space: nowrap; /* 日付は折り返さない */
 }
 
 .description {

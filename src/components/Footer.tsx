@@ -1,5 +1,5 @@
-import { memo } from 'react';
-import styles from './Footer.module.css';
+import { memo } from "react";
+import styles from "./Footer.module.css";
 
 /**
  * フッターコンポーネント
@@ -14,13 +14,9 @@ export const Footer = memo(() => {
       <p className={styles.text}>
         © {currentYear} {import.meta.env.VITE_APP_AUTHOR}
       </p>
-      {version && (
-        <p className={styles.version}>
-          Version {version}
-        </p>
-      )}
+      {version && <p className={styles.version}>Version {version}</p>}
     </footer>
   );
 });
 
-Footer.displayName = 'Footer';
+Footer.displayName = "Footer";

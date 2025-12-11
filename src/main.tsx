@@ -1,18 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import '@styles/global.css';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
+import "@styles/global.css";
 
 // DOM要素の取得と型アサーション
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 
 if (!rootElement) {
-  throw new Error('Root element not found');
+  throw new Error("Root element not found");
 }
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
-  </StrictMode>,
-)
+  </StrictMode>
+);

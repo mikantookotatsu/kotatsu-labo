@@ -1,7 +1,7 @@
-import { memo } from 'react';
-import { Link } from 'react-router-dom';
-import logo from '@/assets/logo.png';
-import styles from './Header.module.css';
+import { memo } from "react";
+import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
+import styles from "./Header.module.css";
 
 /**
  * ヘッダーコンポーネント
@@ -10,17 +10,21 @@ import styles from './Header.module.css';
 export const Header = memo(() => {
   return (
     <header className={styles.header}>
-      <Link to="/" >
+      <Link to="/">
         <img src={logo} alt="Logo" className={styles.logo} />
       </Link>
 
       <nav>
         <ul className={styles.menu}>
           <li>
-            <Link to="/" className={styles.menuLink}>Home</Link>
+            <Link to="/" className={styles.menuLink}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/games" className={styles.menuLink}>Games</Link>
+            <Link to="/games" className={styles.menuLink}>
+              Games
+            </Link>
           </li>
         </ul>
       </nav>
@@ -28,4 +32,4 @@ export const Header = memo(() => {
   );
 });
 
-Header.displayName = 'Header';
+Header.displayName = "Header";

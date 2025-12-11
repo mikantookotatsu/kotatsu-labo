@@ -33,7 +33,7 @@
 /* ゲームサムネイル */
 .gameImage {
   display: block;
-  margin:12px auto 0px auto;
+  margin: 12px auto 0px auto;
 
   width: 50%;
   object-fit: cover;

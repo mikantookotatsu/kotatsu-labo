@@ -1,42 +1,37 @@
-import { Layout } from '@components/Layout/Layout';
-import hiAndLowImg from '@/assets/games-img/hi-and-low.png';
-import styles from './GamePage.module.css';
+import { Layout } from "@components/Layout/Layout";
+import { Link } from "react-router-dom";
+import { gamesData } from "@/data/games";
+import styles from "./GamePage.module.css";
 
 export function GamePage() {
   return (
     <Layout>
-      <h1 className={styles.title}>
-        作成したGameの一覧
-      </h1>
-      
+      <h1 className={styles.title}>作成したGameの一覧</h1>
+
       <div className={styles.gameGrid}>
         {/* ゲーム一覧 */}
-        <article className={styles.gameCard}>
-          <h2 className={styles.gameTitle}>HI&LOW</h2>
-          <img 
-            src={hiAndLowImg}
-            alt="HI&LOWゲームのサムネイル画像" 
-            className={styles.gameImage}
-          />
-          <div className={styles.gameInfo}>
-            <p className={styles.gameDescription}>
-              K-laboで最初に作成したHI&LOWゲームです。ドラクエカジノのダブルアップをイメージして作りました。平成の見た目！
-            </p>
-            <p>
-              #Golang(Ebitengine)
-            </p>
-            <a href="#" className={styles.playButton}>
-              Let's Play!
-            </a>
-          </div>
-        </article>
+        {gamesData.map((game) => (
+          <article key={game.id} className={styles.gameCard}>
+            <h2 className={styles.gameTitle}>{game.title}</h2>
+            <img
+              src={`/games-img/${game.thumbnailPath}`}
+              alt={game.title}
+              className={styles.gameImage}
+            />
+            <div className={styles.gameInfo}>
+              <p className={styles.gameDescription}>{game.description}</p>
+              <Link to={`/games/${game.id}`} className={styles.playButton}>
+                Let's Play!!
+              </Link>
+            </div>
+          </article>
+        ))}
 
+        {/* 最後は製作中としておく */}
         <article className={styles.gameCard}>
           <h2 className={styles.gameTitle}>Comming Soon...</h2>
           <div className={styles.gameInfo}>
-            <p className={styles.gameDescription}>
-              製作中!!
-            </p>
+            <p className={styles.gameDescription}>製作中!!</p>
           </div>
         </article>
       </div>

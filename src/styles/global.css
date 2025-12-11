@@ -8,14 +8,14 @@
   --color-title: #1f1f1f;
   --color-border: #e5e7eb;
   --color-shadow: rgba(0, 0, 0, 0.1);
-  
+
   /* スペーシング */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
-  
+
   /* フォント */
   --font-family: system-ui, sans-serif; /* システムフォントを指定 */
   --font-size-xs: 0.75rem;
@@ -36,10 +36,12 @@
 }
 
 /* リセットCSS */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* グローバルスタイル */
@@ -61,7 +63,13 @@ ul {
 }
 
 /* リンクのスタイルをリセット */
-a, a:visited  {
+a,
+a:visited {
   text-decoration: none;
   color: inherit;
+}
+
+canvas {
+  max-width: 100%;
+  max-height: 100%;
 }

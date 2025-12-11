@@ -1,0 +1,133 @@
+/* 詳細全体 */
+.container {
+  border: 1px solid var(--color-main);
+  border-radius: 4px;
+  background-color: var(--color-primary);
+  margin: 10px auto;
+  max-width: 900px;
+  width: 100%;
+  overflow: hidden;
+}
+/* ゲームタイトル */
+.title {
+  padding: 4px 12px;
+  color: var(--color-title);
+  background-color: var(--color-primary);
+  border-bottom: 1px solid var(--color-main);
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+}
+/* 公開日 */
+.date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+}
+
+/* ゲーム画面 */
+.gameSection {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ゲームの説明 */
+.descriptionSection,
+.controlsSection {
+  margin: 12px 12px;
+  border: 1px dashed var(--color-main);
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.sectionTitle {
+  padding: 4px 12px;
+  color: var(--color-title);
+  border-bottom: 1px dashed var(--color-main);
+  font-weight: 400;
+}
+
+.description {
+  color: var(--color-text);
+  padding: 4px 12px;
+}
+
+.controlsList {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.controlsTable th,
+.controlsTable td {
+  padding: 8px;
+  border-bottom: 1px dashed var(--color-main);
+}
+
+.keyCell {
+  width: 80px;
+}
+
+/* キー表示 */
+.key {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid var(--color-main);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+/* 戻るリンク */
+.backLink {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* 戻るボタン */
+.backButton {
+  display: inline-block;
+  padding: 12px;
+  border: 1px dashed var(--color-main);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--color-text);
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-accent);
+    color: white;
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .controlsTable th,
+  .controlsTable td {
+    padding: 10px 12px;
+    font-size: 0.875rem;
+  }
+
+  .keyCell {
+    width: 120px;
+  }
+
+  .key {
+    min-width: 50px;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+}
