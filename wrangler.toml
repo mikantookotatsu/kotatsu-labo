@@ -1,0 +1,10 @@
+# プロジェクト名 (name)
+name = "kotatsu-labo"
+
+# 互換性日付 (compatibility_date)
+# 通常は今日の日付
+compatibility_date = "2025-12-11"
+
+# ビルド出力ディレクトリへのパスを指定
+[site]
+bucket = "./dist"
