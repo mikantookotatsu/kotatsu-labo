@@ -24,7 +24,8 @@
 .logo {
   height: 50px;
   width: auto;
-  background: var(--color-background);
+  background: transparent;
+  filter: var(--logo-filter);
   border-radius: 5px;
   transition: opacity 0.2s ease;
 
