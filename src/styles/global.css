@@ -3,11 +3,9 @@
   --color-primary: #fcfdfe; /* ベース */
   --color-main: #1f1f1f; /* メイン */
   --color-accent: #f9a604;
-  --color-background: #fcfdfe;
   --color-text: #3f3f3f;
   --color-title: #1f1f1f;
   --color-border: #e5e7eb;
-  --color-shadow: rgba(0, 0, 0, 0.1);
 
   /* スペーシング */
   --spacing-xs: 0.5rem;
@@ -24,14 +22,23 @@
   --font-size-lg: 1.25rem;
   --font-size-xl: 1.5rem;
   --font-size-2xl: 2rem;
+
+  /* ロゴフィルター */
+  --logo-filter: none;
 }
 
 /* ダークモード */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #1a1a1a;
+    --color-primary: #1a1a1a;
+    --color-main: #fcfdfe;
+    --color-accent: #f9a604;
     --color-text: #ffffff;
+    --color-title: #fcfdfe;
     --color-border: #2a2a2a;
+
+    /* ダークモード: 色を100%反転（黒→白） */
+    --logo-filter: invert(1);
   }
 }
 
@@ -50,7 +57,7 @@ body {
   font-size: var(--font-size-base);
   line-height: 1.6;
   color: var(--color-text);
-  background-color: var(--color-background);
+  background-color: var(--color-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

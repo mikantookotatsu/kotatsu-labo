@@ -14,7 +14,7 @@
 
 /* ゲームのカードレイアウト */
 .gameCard {
-  background-color: var(color-background);
+  background-color: var(color-primary);
   border: 1px solid var(--color-main);
   border-radius: 4px;
   overflow: auto;
