@@ -8,5 +8,9 @@ export interface HistoryItem {
 
 export const historyData: HistoryItem[] = [
   // 追加する場合はこちらに追加
+  {
+    date: "2026-01-08",
+    description: "自分のアイコンを変更しました",
+  },
   { date: "2025-12-11", description: "サイト公開しました🎉" },
 ];
