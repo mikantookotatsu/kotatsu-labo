@@ -22,7 +22,7 @@ export const gamesData: GameInfo[] = [
     id: "hi-and-low",
     title: "HI&LOW",
     description:
-      "kotatsu-laboで最初に作成したHI&LOWゲームです。ドラクエカジノのダブルアップをイメージして作りました。平成の見た目！",
+      "レトロすぎるHI&LOWゲーム。ドラクエカジノのダブルアップをイメージして作成しました",
     wasmPath: "hi-low-game.wasm",
     thumbnailPath: "hi-low-game.png",
     controls: [
@@ -33,5 +33,20 @@ export const gamesData: GameInfo[] = [
       { key: "R Key", action: "リセット" },
     ],
     releaseDate: "2025-11-28",
+  },
+  {
+    id: "aioueo-typing",
+    title: "あいうえお打",
+    description:
+      '"あいうえお"から順に50音を高速にタイピングするゲームです。最高の称号を目指せ！',
+    wasmPath: "aiueo-typing-game.wasm",
+    thumbnailPath: "aiueo-typing-game.png",
+    controls: [
+      { key: "S Key", action: "設定画面" },
+      { key: "T Key", action: "称号確認" },
+      { key: "A Key", action: "開始" },
+      { key: "Esc", action: "リセット" },
+    ],
+    releaseDate: "2026-06-03",
   },
 ];
