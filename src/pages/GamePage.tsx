@@ -29,7 +29,10 @@ export function GamePage() {
 
         {/* 最後は製作中としておく */}
         <article className={styles.gameCard}>
-          <h2 className={styles.gameTitle}>Comming Soon...</h2>
+          <h2 className={styles.gameTitle}>Coming Soon...</h2>
+          <div className={styles.comingSoonImage}>
+            <span>Coming Soon</span>
+          </div>
           <div className={styles.gameInfo}>
             <p className={styles.gameDescription}>製作中!!</p>
           </div>
