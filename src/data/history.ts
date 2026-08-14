@@ -9,6 +9,10 @@ export interface HistoryItem {
 export const historyData: HistoryItem[] = [
   // 追加する場合はこちらに追加
   {
+    date: "2026-08-14",
+    description: "Gameページのレイアウト調整",
+  },
+  {
     date: "2026-06-03",
     description: "あいうえお打(タイピングゲーム)を公開！",
   },

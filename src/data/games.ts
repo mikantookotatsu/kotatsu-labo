@@ -4,6 +4,7 @@
 export interface GameInfo {
   id: string; // ゲームの識別ID
   title: string; // ゲームのタイトル
+  genre: string; // ゲームのジャンル
   description: string; // ゲームの説明
   wasmPath: string; // WebAssemblyファイルのパス
   thumbnailPath: string; // サムネイル画像のパス
@@ -21,6 +22,7 @@ export const gamesData: GameInfo[] = [
   {
     id: "hi-and-low",
     title: "HI&LOW",
+    genre: "Mini Game",
     description:
       "レトロすぎるHI&LOWゲーム。ドラクエカジノのダブルアップをイメージして作成しました",
     wasmPath: "hi-low-game.wasm",
@@ -37,6 +39,7 @@ export const gamesData: GameInfo[] = [
   {
     id: "aioueo-typing",
     title: "あいうえお打",
+    genre: "Typing Game",
     description:
       '"あいうえお"から順に50音を高速にタイピングするゲームです。最高の称号を目指せ！',
     wasmPath: "aiueo-typing-game.wasm",
