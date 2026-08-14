@@ -32,7 +32,12 @@ export function GameDetailPage() {
 
         {/* ゲーム画面 */}
         <section className={styles.gameSection} aria-label="ゲーム画面">
-          <WasmGame wasmPath={game.wasmPath} gameId={game.id} />
+          <WasmGame
+            wasmPath={game.wasmPath}
+            gameId={game.id}
+            width={game.width}
+            height={game.height}
+          />
         </section>
 
         {/* ゲーム説明 */}

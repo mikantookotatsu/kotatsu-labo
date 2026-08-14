@@ -3,11 +3,9 @@
 /* 外側のラッパー - サイズ制御の基準 */
 .wrapper {
   width: 100%;
-  max-width: 800px;
+  height: 100%;
   margin: 0 auto;
   position: relative;
-  /* 16:9のアスペクト比を維持 */
-  aspect-ratio: 4 / 3;
 }
 
 /* iframe本体 */

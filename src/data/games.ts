@@ -10,6 +10,8 @@ export interface GameInfo {
   thumbnailPath: string; // サムネイル画像のパス
   controls: GameControl[]; // 操作方法の説明
   releaseDate: string; // リリース日
+  width: number; // ゲーム画面の本来の幅(px)
+  height: number; // ゲーム画面の本来の高さ(px)
 }
 
 export interface GameControl {
@@ -35,6 +37,8 @@ export const gamesData: GameInfo[] = [
       { key: "R Key", action: "リセット" },
     ],
     releaseDate: "2025-11-28",
+    width: 800,
+    height: 600,
   },
   {
     id: "aioueo-typing",
@@ -51,5 +55,7 @@ export const gamesData: GameInfo[] = [
       { key: "Esc", action: "リセット" },
     ],
     releaseDate: "2026-06-03",
+    width: 640,
+    height: 480,
   },
 ];
